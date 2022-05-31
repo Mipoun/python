@@ -17,7 +17,7 @@ def Morpion():
     def jouer(self, joueur):
     
     #Permet d'initialiser le jeu
-    def __init__(self):
+def __init__(self):
         #Création et initialisation du plateau de jeu
         self.plateau=[['-','-','-'],['-','-','-'],['-','-','-']]
         #Déclaration du premier Joueur
@@ -26,7 +26,7 @@ def Morpion():
         self.J2='O'
     
     #Permet à un joueur de jouer son tour      
-    def jouer(self, joueur):
+def jouer(self, joueur):
         #Demande les coordonnées où le joueur souhaite jouer
         x = input("Entrez l'abscisse compris entre 1 et 3 : ")
         y = input("Entrez l'ordonnée compris entre 1 et 3 : ")
@@ -34,7 +34,7 @@ def Morpion():
         self.plateau[int(x)][int(y)]=joueur
     
     #Affiche le plateau de jeu
-    def afficher_plateau(self):
+ def afficher_plateau(self):
         for i in range (0, 3):
             for j in range (0, 3):
                 print ("|", end="")
@@ -43,7 +43,7 @@ def Morpion():
         print ("-----------------------------------------")
     
     #Test si il y a un vainqueur où si il y a plus de mouvement possible
-    def test_fin_jeu(self,joueur):
+def test_fin_jeu(self,joueur):
         #vérifie le joueur courant n'a pas aligné son signe sur une ligne
         for i in range (0,3):
             compteur=0
@@ -96,7 +96,7 @@ def Morpion():
         return False
       
     #Contient le code qui assure le bon déroulement du jeu en lui même
-    def jeu(self):
+def jeu(self):
         morpion.afficher_plateau()
         bool_fin_jeu=False
         #Tant que le jeu n'est pas fini
@@ -126,5 +126,4 @@ def Morpion():
             elif ( resultat_test_fin_jeu==True):
                 print ("Égalité entre les joueurs" );
                 return "égalité"
-Morpion()        
-        
+
